@@ -1,0 +1,3 @@
+3. Number Guessing Game
+    - Description: A game where the program randomly selects a number within a range, and the user has to guess it.
+    - Skills Learned: Random number generation, loops, conditionals.

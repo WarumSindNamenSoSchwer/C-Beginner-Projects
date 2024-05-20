@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 float addition(float x, float y)
 {
@@ -24,13 +25,14 @@ float division(float x, float y)
     return result;
 }
 
+bool isOn = true;
+
 int main()
 {
     float x, y, result;
     char operator;
-    int True = 1;
     
-    while (True)
+    while (isOn)
     {
         printf("Please enter the operation you would like to peform:\n");
         printf("+ | - | * | / | q\n");
@@ -50,7 +52,7 @@ int main()
 
             result = addition(x, y);
 
-            printf("The result is %.2f", result);
+            printf("The result is %.2f\n", result);
 
             break;
 
@@ -64,7 +66,7 @@ int main()
 
             result = subtraction(x, y);
 
-            printf("The result is %.2f", result);
+            printf("The result is %.2f\n", result);
 
             break;
 
@@ -78,7 +80,7 @@ int main()
 
             result = multiplication(x, y);
 
-            printf("The result is %.2f", result);
+            printf("The result is %.2f\n", result);
 
             break;
 
@@ -92,13 +94,13 @@ int main()
 
             result = division(x, y);
 
-            printf("The result is %.2f", result);
+            printf("The result is %.2f\n", result);
 
             break;
 
         case 'q':
-            printf("test");
-            True += 1;
+            printf("Program will close...\n");
+            isOn = false;
             break;
 
         default:
